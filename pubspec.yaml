@@ -11,6 +11,7 @@ dependencies:
     sdk: flutter
   flutter_hooks: ^0.20.5
   flutter_riverpod: ^2.5.1
+  flutter_svg: ^2.0.10+1
   hooks_riverpod: ^2.5.1
   riverpod_annotation: ^2.3.5
 
@@ -23,3 +24,50 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+
+  assets:
+    - assets/images/ 
+    - assets/icons/ 
+
+  fonts:
+    - family: Poppins
+      fonts:
+        - asset: assets/poppins/fonts/Poppins-Thin.ttf
+          weight: 100
+        - asset: assets/poppins/fonts/Poppins-ExtraLight.ttf
+          weight: 200
+        - asset: assets/poppins/fonts/Poppins-Light.ttf
+          weight: 300
+        - asset: assets/poppins/fonts/Poppins-Regular.ttf
+          weight: 400
+        - asset: assets/poppins/fonts/Poppins-Medium.ttf
+          weight: 500
+        - asset: assets/poppins/fonts/Poppins-SemiBold.ttf
+          weight: 600
+        - asset: assets/poppins/fonts/Poppins-Bold.ttf
+          weight: 700
+        - asset: assets/poppins/fonts/Poppins-ExtraBold.ttf
+          weight: 800
+        - asset: assets/poppins/fonts/Poppins-Black.ttf
+          weight: 900
+
+    - family: montserrat
+      fonts:
+        - asset: assets/montserrat/fonts/montserrat-Thin.ttf
+          weight: 100
+        - asset: assets/montserrat/fonts/montserrat-ExtraLight.ttf
+          weight: 200
+        - asset: assets/montserrat/fonts/montserrat-Light.ttf
+          weight: 300
+        - asset: assets/montserrat/fonts/montserrat-Regular.ttf
+          weight: 400
+        - asset: assets/montserrat/fonts/montserrat-Medium.ttf
+          weight: 500
+        - asset: assets/montserrat/fonts/montserrat-SemiBold.ttf
+          weight: 600
+        - asset: assets/montserrat/fonts/montserrat-Bold.ttf
+          weight: 700
+        - asset: assets/montserrat/fonts/montserrat-ExtraBold.ttf
+          weight: 800
+        - asset: assets/montserrat/fonts/montserrat-Black.ttf
+          weight: 900
