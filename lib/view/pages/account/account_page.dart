@@ -10,6 +10,7 @@ import 'package:mvp_time/view/pages/account/widgets/dark_mode_widget.dart';
 import 'package:mvp_time/view/pages/account/widgets/icon_text_widget.dart';
 import 'package:mvp_time/view/pages/account/widgets/log_out_widget.dart';
 import 'package:mvp_time/view/pages/account/widgets/password_field_widget.dart';
+import 'package:mvp_time/view/pages/notification/notification_page.dart';
 
 class AccountPage extends ConsumerWidget {
   const AccountPage({super.key});
@@ -66,7 +67,13 @@ class AccountPage extends ConsumerWidget {
                   children: [
                     // notification
                     InkWell(
-                      onTap: () {},
+                      onTap: () {
+                        // page routing
+                        Navigator.pushNamed(
+                          context,
+                          NotificationPage.routeName,
+                        );
+                      },
                       child: IconTextWidget(
                         icon: ref.watch(iconConstantsProvider).icNotification,
                         text: ref

@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:mvp_time/core/theme/app_color_palette.dart';
 import 'package:mvp_time/core/theme/extension/app_color_extension.dart';
 import 'package:mvp_time/core/utils/app_sizes.dart';
-import 'package:mvp_time/core/theme/extension/app_spaces_extension.dart';
 import 'package:mvp_time/core/theme/extension/app_typography_extension.dart';
 
 // theme
@@ -10,6 +9,15 @@ final class AppTheme {
   ThemeData call(BuildContext context) {
     return ThemeData(
       scaffoldBackgroundColor: AppColorPalette.white100,
+      appBarTheme: AppBarTheme(
+        backgroundColor: AppColorPalette.white100,
+        titleTextStyle: TextStyle(
+          fontFamily: 'montserrat',
+          fontSize: context.width(16),
+          fontWeight: FontWeight.w600,
+          color: AppColorPalette.grey900,
+        ),
+      ),
       extensions: [
         // color extension
         AppColorExtension(
@@ -18,9 +26,6 @@ final class AppTheme {
           border: AppColorPalette.black150,
           btnText: AppColorPalette.white100,
         ),
-
-        //spaces
-        AppSpaceExtension.fromBaseSpace(8),
 
         //typography
         AppTypographyExtension(
@@ -47,6 +52,12 @@ final class AppTheme {
             fontSize: context.width(14),
             fontWeight: FontWeight.w400,
             color: AppColorPalette.black500,
+          ),
+          bodyLight: TextStyle(
+            fontFamily: 'Poppins',
+            fontSize: context.width(12),
+            fontWeight: FontWeight.w300,
+            color: AppColorPalette.grey500,
           ),
           titleBold: TextStyle(
             fontFamily: 'montserrat',

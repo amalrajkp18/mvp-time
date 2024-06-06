@@ -7,6 +7,7 @@ import 'package:mvp_time/view/pages/home/home_page.dart';
 import 'package:mvp_time/view/pages/projects/project_page.dart';
 import 'package:mvp_time/view/pages/time_line/time_line_page.dart';
 
+//navbar pages
 const List<Widget> pages = [
   HomePage(),
   ProjectsPage(),

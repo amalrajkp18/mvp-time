@@ -5,6 +5,7 @@ class AppTypographyExtension extends ThemeExtension<AppTypographyExtension> {
   final TextStyle bodyMedium;
   final TextStyle bodyRegular;
   final TextStyle bodyBold;
+  final TextStyle bodyLight;
   final TextStyle titleBold;
   final TextStyle titleSemiBold;
   final TextStyle titleMedium;
@@ -21,6 +22,7 @@ class AppTypographyExtension extends ThemeExtension<AppTypographyExtension> {
     required this.btnMedium,
     required this.bodySemibold,
     required this.bodyMedium,
+    required this.bodyLight,
     required this.bodyRegular,
     required this.bodyBold,
     required this.titleBold,
@@ -40,6 +42,7 @@ class AppTypographyExtension extends ThemeExtension<AppTypographyExtension> {
     TextStyle? bodyMedium,
     TextStyle? bodyRegular,
     TextStyle? bodyBold,
+    TextStyle? bodyLight,
     TextStyle? titleBold,
     TextStyle? titleSemiBold,
     TextStyle? titleMedium,
@@ -68,6 +71,7 @@ class AppTypographyExtension extends ThemeExtension<AppTypographyExtension> {
       alertTitleMedium: alertTitleMedium ?? this.alertTitleMedium,
       alertContentRegular: alertTitleMedium ?? this.alertContentRegular,
       alertHintRegular: alertTitleMedium ?? this.alertContentRegular,
+      bodyLight: bodyLight ?? this.bodyLight,
     );
   }
 
@@ -78,24 +82,24 @@ class AppTypographyExtension extends ThemeExtension<AppTypographyExtension> {
       return this;
     }
     return AppTypographyExtension(
-      bodySemibold: TextStyle.lerp(bodySemibold, other.bodySemibold, t)!,
-      bodyMedium: TextStyle.lerp(bodyMedium, other.bodyMedium, t)!,
-      bodyRegular: TextStyle.lerp(bodyRegular, other.bodyRegular, t)!,
-      bodyBold: TextStyle.lerp(bodyBold, other.bodyBold, t)!,
-      titleBold: TextStyle.lerp(titleBold, other.titleBold, t)!,
-      titleSemiBold: TextStyle.lerp(titleSemiBold, other.titleSemiBold, t)!,
-      titleMedium: TextStyle.lerp(titleMedium, titleMedium, t)!,
-      titleRegular: TextStyle.lerp(titleRegular, other.titleRegular, t)!,
-      labelSemiBold: TextStyle.lerp(labelSemiBold, other.labelMedium, t)!,
-      labelMedium: TextStyle.lerp(labelMedium, other.labelMedium, t)!,
-      hintRegular: TextStyle.lerp(hintRegular, other.hintRegular, t)!,
-      btnMedium: TextStyle.lerp(btnMedium, other.btnMedium, t)!,
-      alertTitleMedium:
-          TextStyle.lerp(alertTitleMedium, other.alertTitleMedium, t)!,
-      alertContentRegular:
-          TextStyle.lerp(alertContentRegular, other.alertContentRegular, t)!,
-      alertHintRegular:
-          TextStyle.lerp(alertHintRegular, other.alertHintRegular, t)!,
-    );
+        bodySemibold: TextStyle.lerp(bodySemibold, other.bodySemibold, t)!,
+        bodyMedium: TextStyle.lerp(bodyMedium, other.bodyMedium, t)!,
+        bodyRegular: TextStyle.lerp(bodyRegular, other.bodyRegular, t)!,
+        bodyBold: TextStyle.lerp(bodyBold, other.bodyBold, t)!,
+        titleBold: TextStyle.lerp(titleBold, other.titleBold, t)!,
+        titleSemiBold: TextStyle.lerp(titleSemiBold, other.titleSemiBold, t)!,
+        titleMedium: TextStyle.lerp(titleMedium, titleMedium, t)!,
+        titleRegular: TextStyle.lerp(titleRegular, other.titleRegular, t)!,
+        labelSemiBold: TextStyle.lerp(labelSemiBold, other.labelMedium, t)!,
+        labelMedium: TextStyle.lerp(labelMedium, other.labelMedium, t)!,
+        hintRegular: TextStyle.lerp(hintRegular, other.hintRegular, t)!,
+        btnMedium: TextStyle.lerp(btnMedium, other.btnMedium, t)!,
+        alertTitleMedium:
+            TextStyle.lerp(alertTitleMedium, other.alertTitleMedium, t)!,
+        alertContentRegular:
+            TextStyle.lerp(alertContentRegular, other.alertContentRegular, t)!,
+        alertHintRegular:
+            TextStyle.lerp(alertHintRegular, other.alertHintRegular, t)!,
+        bodyLight: TextStyle.lerp(bodyLight, other.bodyLight, t)!);
   }
 }
