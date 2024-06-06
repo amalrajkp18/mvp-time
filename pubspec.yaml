@@ -32,42 +32,42 @@ flutter:
   fonts:
     - family: Poppins
       fonts:
-        - asset: assets/poppins/fonts/Poppins-Thin.ttf
+        - asset: assets/fonts/poppins/Poppins-Thin.ttf
           weight: 100
-        - asset: assets/poppins/fonts/Poppins-ExtraLight.ttf
+        - asset: assets/fonts/poppins/Poppins-ExtraLight.ttf
           weight: 200
-        - asset: assets/poppins/fonts/Poppins-Light.ttf
+        - asset: assets/fonts/poppins/Poppins-Light.ttf
           weight: 300
-        - asset: assets/poppins/fonts/Poppins-Regular.ttf
+        - asset: assets/fonts/poppins/Poppins-Regular.ttf
           weight: 400
-        - asset: assets/poppins/fonts/Poppins-Medium.ttf
+        - asset: assets/fonts/poppins/Poppins-Medium.ttf
           weight: 500
-        - asset: assets/poppins/fonts/Poppins-SemiBold.ttf
+        - asset: assets/fonts/poppins/Poppins-SemiBold.ttf
           weight: 600
-        - asset: assets/poppins/fonts/Poppins-Bold.ttf
+        - asset: assets/fonts/poppins/Poppins-Bold.ttf
           weight: 700
-        - asset: assets/poppins/fonts/Poppins-ExtraBold.ttf
+        - asset: assets/fonts/poppins/Poppins-ExtraBold.ttf
           weight: 800
-        - asset: assets/poppins/fonts/Poppins-Black.ttf
+        - asset: assets/fonts/poppins/Poppins-Black.ttf
           weight: 900
 
     - family: montserrat
       fonts:
-        - asset: assets/montserrat/fonts/montserrat-Thin.ttf
+        - asset: assets/fonts/montserrat/montserrat-Thin.ttf
           weight: 100
-        - asset: assets/montserrat/fonts/montserrat-ExtraLight.ttf
+        - asset: assets/fonts/montserrat/montserrat-ExtraLight.ttf
           weight: 200
-        - asset: assets/montserrat/fonts/montserrat-Light.ttf
+        - asset: assets/fonts/montserrat/montserrat-Light.ttf
           weight: 300
-        - asset: assets/montserrat/fonts/montserrat-Regular.ttf
+        - asset: assets/fonts/montserrat/montserrat-Regular.ttf
           weight: 400
-        - asset: assets/montserrat/fonts/montserrat-Medium.ttf
+        - asset: assets/fonts/montserrat/montserrat-Medium.ttf
           weight: 500
-        - asset: assets/montserrat/fonts/montserrat-SemiBold.ttf
+        - asset: assets/fonts/montserrat/montserrat-SemiBold.ttf
           weight: 600
-        - asset: assets/montserrat/fonts/montserrat-Bold.ttf
+        - asset: assets/fonts/montserrat/montserrat-Bold.ttf
           weight: 700
-        - asset: assets/montserrat/fonts/montserrat-ExtraBold.ttf
+        - asset: assets/fonts/montserrat/montserrat-ExtraBold.ttf
           weight: 800
-        - asset: assets/montserrat/fonts/montserrat-Black.ttf
+        - asset: assets/fonts/montserrat/montserrat-Black.ttf
           weight: 900

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mvp_time/core/theme/extension/app_sizes_extension.dart';
+import 'package:mvp_time/core/utils/app_sizes.dart';
 
 // white spacer
 final class WhiteSpacer {

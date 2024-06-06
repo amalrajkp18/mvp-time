@@ -1,10 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:mvp_time/core/routes/page_routes.dart';
 import 'package:mvp_time/core/theme/app_theme.dart';
 import 'package:mvp_time/view/pages/login/login_page.dart';
 
 void main() {
-  runApp(const MainApp());
+  runApp(
+    const ProviderScope(
+      child: MainApp(),
+    ),
+  );
 }
 
 class MainApp extends StatelessWidget {

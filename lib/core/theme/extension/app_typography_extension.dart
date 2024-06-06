@@ -11,8 +11,11 @@ class AppTypographyExtension extends ThemeExtension<AppTypographyExtension> {
   final TextStyle titleRegular;
   final TextStyle labelSemiBold;
   final TextStyle labelMedium;
+  final TextStyle hintRegular;
+  final TextStyle btnMedium;
 
   AppTypographyExtension({
+    required this.btnMedium,
     required this.bodySemibold,
     required this.bodyMedium,
     required this.bodyRegular,
@@ -23,20 +26,22 @@ class AppTypographyExtension extends ThemeExtension<AppTypographyExtension> {
     required this.titleRegular,
     required this.labelSemiBold,
     required this.labelMedium,
+    required this.hintRegular,
   });
   @override
-  ThemeExtension<AppTypographyExtension> copyWith({
-    TextStyle? bodySemibold,
-    TextStyle? bodyMedium,
-    TextStyle? bodyRegular,
-    TextStyle? bodyBold,
-    TextStyle? titleBold,
-    TextStyle? titleSemiBold,
-    TextStyle? titleMedium,
-    TextStyle? titleRegular,
-    TextStyle? labelSemiBold,
-    TextStyle? labelMedium,
-  }) {
+  ThemeExtension<AppTypographyExtension> copyWith(
+      {TextStyle? bodySemibold,
+      TextStyle? bodyMedium,
+      TextStyle? bodyRegular,
+      TextStyle? bodyBold,
+      TextStyle? titleBold,
+      TextStyle? titleSemiBold,
+      TextStyle? titleMedium,
+      TextStyle? titleRegular,
+      TextStyle? labelSemiBold,
+      TextStyle? labelMedium,
+      TextStyle? hintRegular,
+      TextStyle? btnMedium}) {
     return AppTypographyExtension(
       bodySemibold: bodySemibold ?? this.bodySemibold,
       bodyMedium: bodyMedium ?? this.bodyMedium,
@@ -48,6 +53,8 @@ class AppTypographyExtension extends ThemeExtension<AppTypographyExtension> {
       titleRegular: titleRegular ?? this.titleRegular,
       labelSemiBold: labelSemiBold ?? this.labelSemiBold,
       labelMedium: labelMedium ?? this.labelMedium,
+      hintRegular: hintRegular ?? this.hintRegular,
+      btnMedium: btnMedium ?? this.btnMedium,
     );
   }
 
@@ -68,6 +75,8 @@ class AppTypographyExtension extends ThemeExtension<AppTypographyExtension> {
       titleRegular: TextStyle.lerp(titleRegular, other.titleRegular, t)!,
       labelSemiBold: TextStyle.lerp(labelSemiBold, other.labelMedium, t)!,
       labelMedium: TextStyle.lerp(labelMedium, other.labelMedium, t)!,
+      hintRegular: TextStyle.lerp(hintRegular, other.hintRegular, t)!,
+      btnMedium: TextStyle.lerp(btnMedium, other.btnMedium, t)!,
     );
   }
 }
