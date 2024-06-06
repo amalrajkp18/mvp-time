@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class AppColorExtension extends ThemeExtension<AppColorExtension> {
   final Color primary;
-
+  final Color secondary;
   final Color border;
   final Color btnText;
 
@@ -10,6 +10,7 @@ class AppColorExtension extends ThemeExtension<AppColorExtension> {
     required this.primary,
     required this.border,
     required this.btnText,
+    required this.secondary,
   });
 
   @override
@@ -20,9 +21,11 @@ class AppColorExtension extends ThemeExtension<AppColorExtension> {
     Color? btnText,
   }) {
     return AppColorExtension(
-        primary: primary ?? this.primary,
-        border: border ?? this.border,
-        btnText: btnText ?? this.btnText);
+      primary: primary ?? this.primary,
+      border: border ?? this.border,
+      btnText: btnText ?? this.btnText,
+      secondary: secondary ?? this.secondary,
+    );
   }
 
   @override
@@ -35,6 +38,7 @@ class AppColorExtension extends ThemeExtension<AppColorExtension> {
       primary: Color.lerp(primary, other.primary, t)!,
       border: Color.lerp(border, other.border, t)!,
       btnText: Color.lerp(btnText, other.btnText, t)!,
+      secondary: Color.lerp(secondary, other.secondary, t)!,
     );
   }
 }

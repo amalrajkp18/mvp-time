@@ -1,4 +1,8 @@
-final class ProfilePageConstants {
+import 'package:riverpod_annotation/riverpod_annotation.dart';
+
+part 'account_page_constants.g.dart';
+
+final class AccountPageConstants {
   final String txtNotification = "Notifications";
   final String txtDarkMode = "Dark mode";
   final String txtLogout = "Logout";
@@ -12,4 +16,10 @@ final class ProfilePageConstants {
   final String txtLogoutSub = "Are You sure you want to logout?";
   final String txtBtnYes = "Yes";
   final String txtBtnNo = "NO";
+  final String txtStar = "***********";
+}
+
+@riverpod
+AccountPageConstants accountPageConstants(AccountPageConstantsRef ref) {
+  return AccountPageConstants();
 }

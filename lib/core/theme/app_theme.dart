@@ -9,13 +9,14 @@ import 'package:mvp_time/core/theme/extension/app_typography_extension.dart';
 final class AppTheme {
   ThemeData call(BuildContext context) {
     return ThemeData(
-      scaffoldBackgroundColor: AppColorPalette.white900,
+      scaffoldBackgroundColor: AppColorPalette.white100,
       extensions: [
         // color extension
         AppColorExtension(
-          primary: AppColorPalette.black900,
+          primary: AppColorPalette.black500,
+          secondary: AppColorPalette.white100,
           border: AppColorPalette.black150,
-          btnText: AppColorPalette.white900,
+          btnText: AppColorPalette.white100,
         ),
 
         //spaces
@@ -27,73 +28,91 @@ final class AppTheme {
             fontFamily: 'montserrat',
             fontSize: context.width(14),
             fontWeight: FontWeight.w400,
-            color: AppColorPalette.black900,
+            color: AppColorPalette.black500,
           ),
           bodyMedium: TextStyle(
             fontFamily: 'montserrat',
-            fontSize: context.width(14),
-            fontWeight: FontWeight.w400,
-            color: AppColorPalette.black900,
+            fontSize: context.width(13),
+            fontWeight: FontWeight.w500,
+            color: AppColorPalette.grey700,
           ),
           bodyRegular: TextStyle(
             fontFamily: 'montserrat',
             fontSize: context.width(12),
             fontWeight: FontWeight.w400,
-            color: AppColorPalette.black900,
+            color: AppColorPalette.grey700,
           ),
           bodyBold: TextStyle(
             fontFamily: 'montserrat',
             fontSize: context.width(14),
             fontWeight: FontWeight.w400,
-            color: AppColorPalette.black900,
+            color: AppColorPalette.black500,
           ),
           titleBold: TextStyle(
             fontFamily: 'montserrat',
             fontSize: context.width(16),
             fontWeight: FontWeight.w700,
-            color: AppColorPalette.black900,
+            color: AppColorPalette.black500,
           ),
           titleSemiBold: TextStyle(
             fontFamily: 'montserrat',
             fontSize: context.width(14),
-            fontWeight: FontWeight.w400,
-            color: AppColorPalette.black900,
+            fontWeight: FontWeight.w600,
+            color: AppColorPalette.grey900,
           ),
           titleMedium: TextStyle(
             fontFamily: 'montserrat',
-            fontSize: context.width(14),
-            fontWeight: FontWeight.w400,
-            color: AppColorPalette.black900,
+            fontSize: context.width(13),
+            fontWeight: FontWeight.w500,
+            color: AppColorPalette.grey700,
           ),
           titleRegular: TextStyle(
             fontFamily: 'montserrat',
             fontSize: context.width(14),
             fontWeight: FontWeight.w400,
-            color: AppColorPalette.black900,
+            color: AppColorPalette.black500,
           ),
           labelSemiBold: TextStyle(
             fontFamily: 'montserrat',
             fontSize: context.width(14),
             fontWeight: FontWeight.w400,
-            color: AppColorPalette.black900,
+            color: AppColorPalette.black500,
           ),
           labelMedium: TextStyle(
             fontFamily: 'montserrat',
             fontSize: context.width(14),
             fontWeight: FontWeight.w400,
-            color: AppColorPalette.black900,
+            color: AppColorPalette.black500,
           ),
           hintRegular: TextStyle(
             fontFamily: 'montserrat',
             fontSize: context.width(14),
             fontWeight: FontWeight.w400,
-            color: AppColorPalette.black900,
+            color: AppColorPalette.black500,
           ),
           btnMedium: TextStyle(
             fontFamily: 'montserrat',
             fontSize: context.width(18),
             fontWeight: FontWeight.w500,
-            color: AppColorPalette.white900,
+            color: AppColorPalette.white100,
+          ),
+          alertTitleMedium: TextStyle(
+            fontFamily: 'Poppins',
+            fontSize: context.width(14),
+            fontWeight: FontWeight.w500,
+            color: AppColorPalette.black500,
+          ),
+          alertContentRegular: TextStyle(
+            fontFamily: 'Poppins',
+            fontSize: context.width(17),
+            fontWeight: FontWeight.w400,
+            color: AppColorPalette.black500,
+          ),
+          alertHintRegular: TextStyle(
+            fontFamily: 'Poppins',
+            fontSize: context.width(12),
+            fontWeight: FontWeight.w400,
+            color: AppColorPalette.grey500,
           ),
         )
       ],

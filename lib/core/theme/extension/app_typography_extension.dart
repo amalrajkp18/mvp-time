@@ -13,6 +13,9 @@ class AppTypographyExtension extends ThemeExtension<AppTypographyExtension> {
   final TextStyle labelMedium;
   final TextStyle hintRegular;
   final TextStyle btnMedium;
+  final TextStyle alertTitleMedium;
+  final TextStyle alertContentRegular;
+  final TextStyle alertHintRegular;
 
   AppTypographyExtension({
     required this.btnMedium,
@@ -27,21 +30,28 @@ class AppTypographyExtension extends ThemeExtension<AppTypographyExtension> {
     required this.labelSemiBold,
     required this.labelMedium,
     required this.hintRegular,
+    required this.alertTitleMedium,
+    required this.alertContentRegular,
+    required this.alertHintRegular,
   });
   @override
-  ThemeExtension<AppTypographyExtension> copyWith(
-      {TextStyle? bodySemibold,
-      TextStyle? bodyMedium,
-      TextStyle? bodyRegular,
-      TextStyle? bodyBold,
-      TextStyle? titleBold,
-      TextStyle? titleSemiBold,
-      TextStyle? titleMedium,
-      TextStyle? titleRegular,
-      TextStyle? labelSemiBold,
-      TextStyle? labelMedium,
-      TextStyle? hintRegular,
-      TextStyle? btnMedium}) {
+  ThemeExtension<AppTypographyExtension> copyWith({
+    TextStyle? bodySemibold,
+    TextStyle? bodyMedium,
+    TextStyle? bodyRegular,
+    TextStyle? bodyBold,
+    TextStyle? titleBold,
+    TextStyle? titleSemiBold,
+    TextStyle? titleMedium,
+    TextStyle? titleRegular,
+    TextStyle? labelSemiBold,
+    TextStyle? labelMedium,
+    TextStyle? hintRegular,
+    TextStyle? btnMedium,
+    TextStyle? alertTitleMedium,
+    TextStyle? alertContentRegular,
+    TextStyle? alertHintRegular,
+  }) {
     return AppTypographyExtension(
       bodySemibold: bodySemibold ?? this.bodySemibold,
       bodyMedium: bodyMedium ?? this.bodyMedium,
@@ -55,6 +65,9 @@ class AppTypographyExtension extends ThemeExtension<AppTypographyExtension> {
       labelMedium: labelMedium ?? this.labelMedium,
       hintRegular: hintRegular ?? this.hintRegular,
       btnMedium: btnMedium ?? this.btnMedium,
+      alertTitleMedium: alertTitleMedium ?? this.alertTitleMedium,
+      alertContentRegular: alertTitleMedium ?? this.alertContentRegular,
+      alertHintRegular: alertTitleMedium ?? this.alertContentRegular,
     );
   }
 
@@ -77,6 +90,12 @@ class AppTypographyExtension extends ThemeExtension<AppTypographyExtension> {
       labelMedium: TextStyle.lerp(labelMedium, other.labelMedium, t)!,
       hintRegular: TextStyle.lerp(hintRegular, other.hintRegular, t)!,
       btnMedium: TextStyle.lerp(btnMedium, other.btnMedium, t)!,
+      alertTitleMedium:
+          TextStyle.lerp(alertTitleMedium, other.alertTitleMedium, t)!,
+      alertContentRegular:
+          TextStyle.lerp(alertContentRegular, other.alertContentRegular, t)!,
+      alertHintRegular:
+          TextStyle.lerp(alertHintRegular, other.alertHintRegular, t)!,
     );
   }
 }
