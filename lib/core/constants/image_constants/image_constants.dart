@@ -6,7 +6,8 @@ final class ImageConstants {
   static const String basePath = "assets/images/img_";
 
   final String imgMvpLogo = "${basePath}mvp.png";
-  final String imgNotification = "${basePath}notification.png";
+  final String imgArabyAi = "${basePath}araby_ai.png";
+  final String imgKudos = "${basePath}kudos.png";
   final String imgUserOne = "${basePath}user1.png";
   final String imgUserTwo = "${basePath}user2.png";
   final String imgUserThree = "${basePath}user3.png";

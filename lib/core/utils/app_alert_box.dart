@@ -40,15 +40,7 @@ appAlertBox(
           // width spacer
           const Spacer(flex: 3),
           // icon close
-          InkWell(
-            onTap: () {
-              // close alert box
-              Navigator.pop(context);
-            },
-            child: SvgPicture.asset(
-              ref.watch(iconConstantsProvider).icClose,
-            ),
-          )
+          const AppCloseBtnWidget()
         ],
       ),
       actions: [
@@ -62,4 +54,23 @@ appAlertBox(
       actionsAlignment: MainAxisAlignment.center,
     ),
   );
+}
+
+class AppCloseBtnWidget extends ConsumerWidget {
+  const AppCloseBtnWidget({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    return InkWell(
+      onTap: () {
+        // close
+        Navigator.pop(context);
+      },
+      child: SvgPicture.asset(
+        ref.watch(iconConstantsProvider).icClose,
+      ),
+    );
+  }
 }

@@ -23,6 +23,7 @@ class PasswordFieldWidget extends HookConsumerWidget {
     final emailTextController = useTextEditingController();
 
     return InkWell(
+      borderRadius: BorderRadius.circular(context.width(12)),
       onTap: () {
         appAlertBox(
           context,

@@ -11,7 +11,7 @@ class NotificationListTileWidget extends ConsumerWidget {
   const NotificationListTileWidget({
     super.key,
     required this.image,
-    required this.userName,
+    required this.title,
     required this.textSub,
     required this.content,
     required this.textHead,
@@ -20,7 +20,7 @@ class NotificationListTileWidget extends ConsumerWidget {
   });
 
   final String image;
-  final String userName;
+  final String title;
   final String textSub;
   final String content;
   final String textHead;
@@ -57,8 +57,8 @@ class NotificationListTileWidget extends ConsumerWidget {
               children: [
                 // image
                 Container(
-                  width: context.width(40),
-                  height: context.height(40),
+                  width: context.width(36),
+                  height: context.height(36),
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(
                       context.width(40),
@@ -77,9 +77,9 @@ class NotificationListTileWidget extends ConsumerWidget {
                 ),
                 // width space
                 WhiteSpacer()(context, width: 16),
-                // userName
+                // title
                 Text(
-                  userName,
+                  title,
                   style: TextStyle(
                     fontFamily: 'Poppins',
                     fontSize: context.width(14),

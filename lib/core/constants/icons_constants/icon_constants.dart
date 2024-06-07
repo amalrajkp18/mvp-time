@@ -19,6 +19,7 @@ final class IconConstants {
   final String icNotification = "${basePath}notification.svg";
   final String icTimeLine = "${basePath}timeline.svg";
   final String icProfileCircle = "${basePath}profile_circle.svg";
+  final String icSearch = "${basePath}search.svg";
 }
 
 @riverpod

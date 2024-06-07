@@ -16,7 +16,11 @@ class NotificationPage extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     return Scaffold(
       appBar: AppBar(
-        leading: const AppBackBtnWidget(),
+        leading: AppBackBtnWidget(
+          onTap: () {
+            Navigator.pop(context);
+          },
+        ),
         title: Text(
           ref.watch(notificationPageConstantsProvider).txtHead,
         ),
@@ -31,8 +35,8 @@ class NotificationPage extends ConsumerWidget {
         child: ListView.separated(
           // notification tile
           itemBuilder: (context, index) => NotificationListTileWidget(
-            image: ref.watch(imageConstantsProvider).imgNotification,
-            userName: "Araby ai",
+            image: ref.watch(imageConstantsProvider).imgArabyAi,
+            title: "Araby ai",
             content: "Task planner App with clean and modern... ",
             textHead: "Link preview ",
             textSub: "www.update username home and profile, edit password",

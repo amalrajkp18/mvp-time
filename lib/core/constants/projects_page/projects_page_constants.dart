@@ -9,6 +9,7 @@ final class ProjectsPageConstants {
   final String txtPending = "Pending";
   final String txtProgress = "Progress";
   final String txtBused = "Bused";
+  final String txtTwoPlus = "2+";
 }
 
 @riverpod
