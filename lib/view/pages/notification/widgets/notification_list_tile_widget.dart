@@ -15,6 +15,8 @@ class NotificationListTileWidget extends ConsumerWidget {
     required this.textSub,
     required this.content,
     required this.textHead,
+    required this.onPressedApprove,
+    required this.onPressedDeny,
   });
 
   final String image;
@@ -22,6 +24,8 @@ class NotificationListTileWidget extends ConsumerWidget {
   final String textSub;
   final String content;
   final String textHead;
+  final void Function() onPressedApprove;
+  final void Function() onPressedDeny;
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -140,7 +144,7 @@ class NotificationListTileWidget extends ConsumerWidget {
                   text: ref
                       .watch(notificationPageConstantsProvider)
                       .txtBtnApprove,
-                  onPressed: () {},
+                  onPressed: onPressedApprove,
                 ),
                 // width spacer
                 WhiteSpacer()(context, width: 24),
@@ -148,7 +152,7 @@ class NotificationListTileWidget extends ConsumerWidget {
                 NotificationBtWidget(
                   isOutlined: true,
                   text: ref.watch(notificationPageConstantsProvider).txtBtnDeny,
-                  onPressed: () {},
+                  onPressed: onPressedDeny,
                 )
               ],
             ),

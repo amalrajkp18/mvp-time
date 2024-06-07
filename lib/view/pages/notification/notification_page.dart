@@ -36,6 +36,8 @@ class NotificationPage extends ConsumerWidget {
             content: "Task planner App with clean and modern... ",
             textHead: "Link preview ",
             textSub: "www.update username home and profile, edit password",
+            onPressedApprove: () {},
+            onPressedDeny: () {},
           ),
           separatorBuilder: (context, index) => WhiteSpacer()(
             context,
