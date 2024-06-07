@@ -46,7 +46,7 @@ class AccountPage extends ConsumerWidget {
               // activity field
               Container(
                 width: double.infinity,
-                height: context.height(208),
+                height: context.height(216),
                 padding: EdgeInsets.symmetric(
                   horizontal: context.width(16),
                   vertical: context.height(20),

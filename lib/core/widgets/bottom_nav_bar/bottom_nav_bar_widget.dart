@@ -23,7 +23,7 @@ class BottomNavBarWidget extends ConsumerWidget {
         color: context.colors.secondary,
         boxShadow: [
           BoxShadow(
-            color: AppColorPalette.blueGrey200..withOpacity(0.25),
+            color: AppColorPalette.blueGrey200..withOpacity(0.2),
             blurRadius: 40,
             spreadRadius: -4,
             offset: const Offset(0, 0),

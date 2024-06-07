@@ -10,6 +10,7 @@ final class AppTheme {
     return ThemeData(
       scaffoldBackgroundColor: AppColorPalette.white100,
       appBarTheme: AppBarTheme(
+        surfaceTintColor: Colors.transparent,
         backgroundColor: AppColorPalette.white100,
         titleTextStyle: TextStyle(
           fontFamily: 'montserrat',
@@ -31,8 +32,8 @@ final class AppTheme {
         AppTypographyExtension(
           bodySemibold: TextStyle(
             fontFamily: 'montserrat',
-            fontSize: context.width(14),
-            fontWeight: FontWeight.w400,
+            fontSize: context.width(23),
+            fontWeight: FontWeight.w600,
             color: AppColorPalette.black500,
           ),
           bodyMedium: TextStyle(
@@ -95,6 +96,12 @@ final class AppTheme {
             fontWeight: FontWeight.w400,
             color: AppColorPalette.black500,
           ),
+          labelRegular: TextStyle(
+            fontFamily: 'montserrat',
+            fontSize: context.width(14),
+            fontWeight: FontWeight.w400,
+            color: AppColorPalette.grey650,
+          ),
           hintRegular: TextStyle(
             fontFamily: 'montserrat',
             fontSize: context.width(14),
@@ -107,6 +114,12 @@ final class AppTheme {
             fontWeight: FontWeight.w500,
             color: AppColorPalette.white100,
           ),
+          btnRegular: TextStyle(
+            fontFamily: 'montserrat',
+            fontSize: context.width(16),
+            fontWeight: FontWeight.w400,
+            color: AppColorPalette.grey900,
+          ),
           alertTitleMedium: TextStyle(
             fontFamily: 'Poppins',
             fontSize: context.width(14),
@@ -115,7 +128,7 @@ final class AppTheme {
           ),
           alertContentRegular: TextStyle(
             fontFamily: 'Poppins',
-            fontSize: context.width(17),
+            fontSize: context.width(16),
             fontWeight: FontWeight.w400,
             color: AppColorPalette.black500,
           ),

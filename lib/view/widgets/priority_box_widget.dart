@@ -1,18 +1,19 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:mvp_time/core/constants/projects_page/projects_page_constants.dart';
 import 'package:mvp_time/core/theme/app_color_palette.dart';
 import 'package:mvp_time/core/theme/extension/app_theme_extension.dart';
 import 'package:mvp_time/core/utils/app_sizes.dart';
 import 'package:mvp_time/core/utils/white_spacer.dart';
 
-class PriorityBoxWidget extends ConsumerWidget {
+class PriorityBoxWidget extends StatelessWidget {
   const PriorityBoxWidget({
     super.key,
+    required this.txt,
   });
 
+  final String txt;
+
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
+  Widget build(BuildContext context) {
     return Container(
       padding: EdgeInsets.symmetric(
         horizontal: context.width(6),
@@ -36,7 +37,7 @@ class PriorityBoxWidget extends ConsumerWidget {
           WhiteSpacer()(context, width: 6),
           // text
           Text(
-            ref.watch(projectsPageConstantsProvider).txtHighPriority,
+            txt,
             style: TextStyle(
               fontFamily: 'Poppins',
               fontSize: context.width(11),

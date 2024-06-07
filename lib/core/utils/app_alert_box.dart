@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:mvp_time/core/constants/icons_constants/icon_constants.dart';
 import 'package:mvp_time/core/theme/extension/app_theme_extension.dart';
 import 'package:mvp_time/core/utils/app_sizes.dart';
+import 'package:mvp_time/core/widgets/app_close_btn_widget.dart';
 
 appAlertBox(
   BuildContext context,
@@ -54,23 +53,4 @@ appAlertBox(
       actionsAlignment: MainAxisAlignment.center,
     ),
   );
-}
-
-class AppCloseBtnWidget extends ConsumerWidget {
-  const AppCloseBtnWidget({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context, WidgetRef ref) {
-    return InkWell(
-      onTap: () {
-        // close
-        Navigator.pop(context);
-      },
-      child: SvgPicture.asset(
-        ref.watch(iconConstantsProvider).icClose,
-      ),
-    );
-  }
 }

@@ -31,7 +31,7 @@ class NotificationListTileWidget extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     return Container(
       width: double.infinity,
-      height: context.height(216),
+      height: context.height(230),
       decoration: BoxDecoration(
         color: AppColorPalette.white100,
         borderRadius: BorderRadius.circular(context.width(8)),
@@ -58,7 +58,7 @@ class NotificationListTileWidget extends ConsumerWidget {
                 // image
                 Container(
                   width: context.width(36),
-                  height: context.height(36),
+                  height: context.height(38),
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(
                       context.width(40),

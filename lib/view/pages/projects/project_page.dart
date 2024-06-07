@@ -6,6 +6,7 @@ import 'package:mvp_time/core/theme/extension/app_theme_extension.dart';
 import 'package:mvp_time/core/utils/app_sizes.dart';
 import 'package:mvp_time/core/utils/white_spacer.dart';
 import 'package:mvp_time/core/widgets/app_back_btn_widget.dart';
+import 'package:mvp_time/view/pages/task_details/task_details_page.dart';
 import 'package:mvp_time/view/widgets/search_field_widget.dart';
 import 'package:mvp_time/view/widgets/task_widget.dart';
 
@@ -30,37 +31,52 @@ class ProjectsPage extends HookConsumerWidget {
         padding: EdgeInsets.symmetric(
           horizontal: context.width(16),
         ),
-        child: SingleChildScrollView(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              // height spacer
-              WhiteSpacer()(context, height: 22),
-              // search field
-              SearchFieldWidget(
-                onChanged: (value) {},
-              ),
-              // height spacer
-              WhiteSpacer()(context, height: 24),
-              //project Tiles
-              ListView.separated(
-                shrinkWrap: true,
-                physics: const NeverScrollableScrollPhysics(),
-                itemBuilder: (context, index) => TaskWidget(
-                  percentage: taskList[index]["percentage"],
-                  title: taskList[index]["title"],
-                  subTxt: taskList[index]["subTxt"],
-                  progrees: taskList[index]["progrees"],
-                  imageList: taskList[index]["imageList"],
-                  image: taskList[index]["image"],
-                  isBused: taskList[index]["isBused"],
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            // height spacer
+            WhiteSpacer()(context, height: 22),
+            // search field
+            SearchFieldWidget(
+              onChanged: (value) {},
+            ),
+            // height spacer
+            WhiteSpacer()(context, height: 24),
+            //project Tiles
+            Expanded(
+              child: ListView.separated(
+                itemBuilder: (context, index) => InkWell(
+                  onTap: () {
+                    // navigate to task details
+                    Navigator.pushNamed(
+                      context,
+                      TaskDetailsPage.routeName,
+                      arguments: {
+                        "projectName": "Mvp Task manager",
+                        "taskDeatails": "Design Task management App ",
+                        "description":
+                            "Design Task management App  Design Task management App  Design Task management App  Design Task management App  Design Task",
+                        "date": "4Apr2024",
+                        "time": " 04:45PM",
+                      },
+                    );
+                  },
+                  child: TaskWidget(
+                    percentage: taskList[index]["percentage"],
+                    title: taskList[index]["title"],
+                    subTxt: taskList[index]["subTxt"],
+                    progrees: taskList[index]["progrees"],
+                    imageList: taskList[index]["imageList"],
+                    image: taskList[index]["image"],
+                    isBused: taskList[index]["isBused"],
+                  ),
                 ),
                 separatorBuilder: (context, index) =>
                     WhiteSpacer()(context, height: 16),
                 itemCount: taskList.length,
-              )
-            ],
-          ),
+              ),
+            )
+          ],
         ),
       ),
     );

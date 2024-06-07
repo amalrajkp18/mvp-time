@@ -7,8 +7,8 @@ import 'package:mvp_time/core/theme/app_color_palette.dart';
 import 'package:mvp_time/core/theme/extension/app_theme_extension.dart';
 import 'package:mvp_time/core/utils/app_sizes.dart';
 import 'package:mvp_time/core/utils/white_spacer.dart';
-import 'package:mvp_time/view/widgets/priority_box_widget.dart';
 import 'package:mvp_time/view/widgets/progress_widget.dart';
+import 'package:mvp_time/view/widgets/task_status_headtxt_widget.dart';
 
 class TaskWidget extends ConsumerWidget {
   const TaskWidget({
@@ -61,7 +61,7 @@ class TaskWidget extends ConsumerWidget {
               // image
               Container(
                 width: context.width(36),
-                height: context.height(36),
+                height: context.height(38),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(
                     context.width(40),
@@ -74,7 +74,7 @@ class TaskWidget extends ConsumerWidget {
                     image: AssetImage(
                       image,
                     ),
-                    fit: BoxFit.cover,
+                    fit: BoxFit.contain,
                   ),
                 ),
               ),
@@ -108,17 +108,17 @@ class TaskWidget extends ConsumerWidget {
           ),
           // height spacer
           WhiteSpacer()(context, height: 10),
-          //stacke users profile
+          //stacked users profile
           Stack(
             children: [
               SizedBox(
                 width: context.width(130),
                 height: context.height(64),
               ),
-              for (int i = 0; i < imageList.length; i++)
+              for (int i = 0; i <= imageList.length; i++)
                 Positioned(
                   left: i * context.width(20),
-                  child: i == imageList.length - 1
+                  child: i == imageList.length
                       ? CircleAvatar(
                           radius: context.width(18),
                           backgroundColor: const Color(0xFFE8E8E8),
@@ -139,27 +139,7 @@ class TaskWidget extends ConsumerWidget {
             ],
           ),
           //task status
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              // btn prority
-              const PriorityBoxWidget(),
-              //text status
-              Text(
-                isBused
-                    ? ref.watch(projectsPageConstantsProvider).txtBused
-                    : ref.watch(projectsPageConstantsProvider).txtPending,
-                style: TextStyle(
-                  fontFamily: 'Poppins',
-                  fontSize: context.width(11),
-                  fontWeight: FontWeight.w500,
-                  color: isBused
-                      ? AppColorPalette.green700
-                      : AppColorPalette.orange600,
-                ),
-              )
-            ],
-          ),
+          TaskStatusHeadTxtWidget(isBused: isBused),
           // height spacer
           WhiteSpacer()(context, height: 10),
           // progress text

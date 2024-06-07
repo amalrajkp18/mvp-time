@@ -9,6 +9,7 @@ final class AppColorPalette {
 
   static const Color grey900 = Color(0xFF262626);
   static const Color grey700 = Color(0xFF575757);
+  static const Color grey650 = Color(0xFF646464);
   static const Color grey600 = Color(0xFF8E8E8E);
   static const Color grey500 = Color(0xFF9A9A9A);
   static const Color grey300 = Color(0xFFC1C1C1);
