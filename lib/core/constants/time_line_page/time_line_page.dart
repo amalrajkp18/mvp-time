@@ -2,7 +2,7 @@ import 'package:riverpod_annotation/riverpod_annotation.dart';
 
 part 'time_line_page.g.dart';
 
-final class TimeLinePage {
+final class TimeLinePageConstants {
   final String txtHead = "Time Line";
   final String txtProgress = "Progress";
   final String txtMeetingWithClient = "Meeting with client";
@@ -12,6 +12,6 @@ final class TimeLinePage {
 }
 
 @riverpod
-TimeLinePage timeLinePage(TimeLinePageRef ref) {
-  return TimeLinePage();
+TimeLinePageConstants timeLinePageConstants(TimeLinePageConstantsRef ref) {
+  return TimeLinePageConstants();
 }

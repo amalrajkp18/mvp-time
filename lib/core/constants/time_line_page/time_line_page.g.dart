@@ -6,19 +6,23 @@ part of 'time_line_page.dart';
 // RiverpodGenerator
 // **************************************************************************
 
-String _$timeLinePageHash() => r'edd668aec9bf8605c647b1e6609aa80a66d29642';
+String _$timeLinePageConstantsHash() =>
+    r'2ee023a142ca69e7d2258c6441ddc7a49d8dd090';
 
-/// See also [timeLinePage].
-@ProviderFor(timeLinePage)
-final timeLinePageProvider = AutoDisposeProvider<TimeLinePage>.internal(
-  timeLinePage,
-  name: r'timeLinePageProvider',
-  debugGetCreateSourceHash:
-      const bool.fromEnvironment('dart.vm.product') ? null : _$timeLinePageHash,
+/// See also [timeLinePageConstants].
+@ProviderFor(timeLinePageConstants)
+final timeLinePageConstantsProvider =
+    AutoDisposeProvider<TimeLinePageConstants>.internal(
+  timeLinePageConstants,
+  name: r'timeLinePageConstantsProvider',
+  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
+      ? null
+      : _$timeLinePageConstantsHash,
   dependencies: null,
   allTransitiveDependencies: null,
 );
 
-typedef TimeLinePageRef = AutoDisposeProviderRef<TimeLinePage>;
+typedef TimeLinePageConstantsRef
+    = AutoDisposeProviderRef<TimeLinePageConstants>;
 // ignore_for_file: type=lint
 // ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member

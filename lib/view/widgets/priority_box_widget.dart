@@ -15,6 +15,7 @@ class PriorityBoxWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      width: context.width(100),
       padding: EdgeInsets.symmetric(
         horizontal: context.width(6),
         vertical: context.height(6),

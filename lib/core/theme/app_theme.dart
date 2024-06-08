@@ -25,7 +25,6 @@ final class AppTheme {
           primary: AppColorPalette.black500,
           secondary: AppColorPalette.white100,
           border: AppColorPalette.black150,
-          btnText: AppColorPalette.white100,
         ),
 
         //typography

@@ -38,7 +38,7 @@ class TaskDetailsPage extends ConsumerWidget {
             },
             child: SvgPicture.asset(
               ref.watch(iconConstantsProvider).icMoreVert,
-              width: context.width(30),
+              width: context.width(32),
             ),
           ),
           //width spacer

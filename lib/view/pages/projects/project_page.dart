@@ -10,6 +10,50 @@ import 'package:mvp_time/view/pages/task_details/task_details_page.dart';
 import 'package:mvp_time/view/widgets/search_field_widget.dart';
 import 'package:mvp_time/view/widgets/task_widget.dart';
 
+// sample list
+final List<Map<String, dynamic>> taskList = [
+  {
+    "percentage": '64%',
+    "title": "Kudos Website ",
+    "subTxt": "Task planner App with clean and modern... ",
+    "progrees": 0.45,
+    "imageList": [
+      "assets/images/img_user1.png",
+      "assets/images/img_user2.png",
+      "assets/images/img_user3.png",
+      "assets/images/img_user4.png",
+    ],
+    "image": "assets/images/img_kudos.png",
+    "isBused": false,
+  },
+  {
+    "percentage": '64%',
+    "title": "Kudos Website ",
+    "subTxt": "Task planner App with clean and modern... ",
+    "progrees": 0.45,
+    "imageList": [
+      "assets/images/img_user1.png",
+      "assets/images/img_user2.png",
+    ],
+    "image": "assets/images/img_araby_ai.png",
+    "isBused": true,
+  },
+  {
+    "percentage": '64%',
+    "title": "Kudos Website ",
+    "subTxt": "Task planner App with clean and modern... ",
+    "progrees": 0.45,
+    "imageList": [
+      "assets/images/img_user1.png",
+      "assets/images/img_user2.png",
+      "assets/images/img_user3.png",
+      "assets/images/img_user4.png",
+    ],
+    "image": "assets/images/img_kudos.png",
+    "isBused": false,
+  }
+];
+
 class ProjectsPage extends HookConsumerWidget {
   const ProjectsPage({super.key});
   @override
@@ -82,47 +126,3 @@ class ProjectsPage extends HookConsumerWidget {
     );
   }
 }
-
-// sample list
-final List<Map<String, dynamic>> taskList = [
-  {
-    "percentage": '64%',
-    "title": "Kudos Website ",
-    "subTxt": "Task planner App with clean and modern... ",
-    "progrees": 0.45,
-    "imageList": [
-      "assets/images/img_user1.png",
-      "assets/images/img_user2.png",
-      "assets/images/img_user3.png",
-      "assets/images/img_user4.png",
-    ],
-    "image": "assets/images/img_kudos.png",
-    "isBused": false,
-  },
-  {
-    "percentage": '64%',
-    "title": "Kudos Website ",
-    "subTxt": "Task planner App with clean and modern... ",
-    "progrees": 0.45,
-    "imageList": [
-      "assets/images/img_user1.png",
-      "assets/images/img_user2.png",
-    ],
-    "image": "assets/images/img_araby_ai.png",
-    "isBused": true,
-  },
-  {
-    "percentage": '64%',
-    "title": "Kudos Website ",
-    "subTxt": "Task planner App with clean and modern... ",
-    "progrees": 0.45,
-    "imageList": [
-      "assets/images/img_user1.png",
-      "assets/images/img_user2.png",
-      "assets/images/img_user3.png",
-      "assets/images/img_user4.png",
-    ],
-    "image": "assets/images/img_kudos.png",
-    "isBused": false,
-  }
-];

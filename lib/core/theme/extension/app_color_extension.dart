@@ -4,12 +4,10 @@ class AppColorExtension extends ThemeExtension<AppColorExtension> {
   final Color primary;
   final Color secondary;
   final Color border;
-  final Color btnText;
 
   AppColorExtension({
     required this.primary,
     required this.border,
-    required this.btnText,
     required this.secondary,
   });
 
@@ -18,12 +16,10 @@ class AppColorExtension extends ThemeExtension<AppColorExtension> {
     Color? primary,
     Color? secondary,
     Color? border,
-    Color? btnText,
   }) {
     return AppColorExtension(
       primary: primary ?? this.primary,
       border: border ?? this.border,
-      btnText: btnText ?? this.btnText,
       secondary: secondary ?? this.secondary,
     );
   }
@@ -37,7 +33,6 @@ class AppColorExtension extends ThemeExtension<AppColorExtension> {
     return AppColorExtension(
       primary: Color.lerp(primary, other.primary, t)!,
       border: Color.lerp(border, other.border, t)!,
-      btnText: Color.lerp(btnText, other.btnText, t)!,
       secondary: Color.lerp(secondary, other.secondary, t)!,
     );
   }

@@ -18,22 +18,22 @@ class TaskWidget extends ConsumerWidget {
     required this.subTxt,
     required this.progrees,
     required this.imageList,
-    required this.image,
-    required this.isBused,
+    this.image,
+    this.isBused,
   });
   final String percentage;
   final String title;
   final String subTxt;
   final double progrees;
-  final bool isBused;
+  final bool? isBused;
   final List<String> imageList;
-  final String image;
+  final String? image;
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     return Container(
       width: double.infinity,
-      height: context.height(240),
+      height: context.height(isBused == null ? 216 : 240),
       padding: EdgeInsets.symmetric(
         horizontal: context.width(14),
         vertical: context.height(12),
@@ -59,27 +59,31 @@ class TaskWidget extends ConsumerWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               // image
-              Container(
-                width: context.width(36),
-                height: context.height(38),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(
-                    context.width(40),
-                  ),
-                  border: Border.all(
-                    color: const Color(0xFFDFDFDF),
-                    width: 1,
-                  ),
-                  image: DecorationImage(
-                    image: AssetImage(
-                      image,
-                    ),
-                    fit: BoxFit.contain,
-                  ),
-                ),
-              ),
+              image != null
+                  ? Container(
+                      width: context.width(36),
+                      height: context.height(38),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(
+                          context.width(40),
+                        ),
+                        border: Border.all(
+                          color: const Color(0xFFDFDFDF),
+                          width: 1,
+                        ),
+                        image: DecorationImage(
+                          image: AssetImage(
+                            image!,
+                          ),
+                          fit: BoxFit.contain,
+                        ),
+                      ),
+                    )
+                  : const SizedBox.shrink(),
               // width space
-              WhiteSpacer()(context, width: 16),
+              image != null
+                  ? WhiteSpacer()(context, width: 16)
+                  : const SizedBox.shrink(),
               // title
               Text(
                 title,
@@ -120,7 +124,7 @@ class TaskWidget extends ConsumerWidget {
                   left: i * context.width(20),
                   child: i == imageList.length
                       ? CircleAvatar(
-                          radius: context.width(18),
+                          radius: context.width(16),
                           backgroundColor: const Color(0xFFE8E8E8),
                           child: Text(
                             ref.watch(projectsPageConstantsProvider).txtTwoPlus,
@@ -130,7 +134,7 @@ class TaskWidget extends ConsumerWidget {
                           ),
                         )
                       : CircleAvatar(
-                          radius: context.width(18),
+                          radius: context.width(16),
                           backgroundImage: AssetImage(
                             imageList[i],
                           ),
@@ -139,7 +143,9 @@ class TaskWidget extends ConsumerWidget {
             ],
           ),
           //task status
-          TaskStatusHeadTxtWidget(isBused: isBused),
+          isBused == null
+              ? const SizedBox.shrink()
+              : TaskStatusHeadTxtWidget(isBused: isBused ?? false),
           // height spacer
           WhiteSpacer()(context, height: 10),
           // progress text

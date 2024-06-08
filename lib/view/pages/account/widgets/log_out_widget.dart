@@ -6,6 +6,7 @@ import 'package:mvp_time/core/utils/app_alert_box.dart';
 import 'package:mvp_time/core/utils/white_spacer.dart';
 import 'package:mvp_time/core/widgets/app_main_btn_widget.dart';
 import 'package:mvp_time/view/pages/account/widgets/icon_text_widget.dart';
+import 'package:mvp_time/view/pages/login/login_page.dart';
 
 class LogOutWidget extends ConsumerWidget {
   const LogOutWidget({
@@ -28,7 +29,13 @@ class LogOutWidget extends ConsumerWidget {
               // btn yes
               AppMainBtnWidget(
                 text: ref.watch(accountPageConstantsProvider).txtBtnYes,
-                onPressed: () {},
+                onPressed: () {
+                  //TODO: logout functionalitie
+                  Navigator.pushReplacementNamed(
+                    context,
+                    LoginPage.routeName,
+                  );
+                },
               ),
               // height spacer
               WhiteSpacer()(context, height: 12),

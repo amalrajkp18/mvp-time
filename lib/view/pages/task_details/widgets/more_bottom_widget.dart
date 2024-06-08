@@ -14,14 +14,13 @@ moreBottomWidget(BuildContext context, WidgetRef ref) {
     isDismissible: false,
     context: context,
     builder: (context) => Container(
+      width: double.infinity,
+      height: context.height(290),
       padding: EdgeInsets.only(
         top: context.height(16),
         right: context.width(16),
-        bottom: context.height(28),
-        left: context.width(28),
+        left: context.width(26),
       ),
-      width: double.infinity,
-      height: context.height(278),
       decoration: BoxDecoration(
         color: AppColorPalette.white100,
         borderRadius: BorderRadius.only(
