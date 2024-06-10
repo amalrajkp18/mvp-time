@@ -37,7 +37,7 @@ class CountCtrlWidget extends ConsumerWidget {
         Center(
           child: Container(
             width: context.width(311),
-            height: context.height(52),
+            height: context.height(64),
             padding: EdgeInsets.symmetric(
               horizontal: context.width(10),
               vertical: context.height(8),

@@ -13,6 +13,7 @@ import 'package:mvp_time/view/pages/add_task/widgets/add_task_field_widget.dart'
 import 'package:mvp_time/view/pages/add_task/widgets/calendar_widget.dart';
 import 'package:mvp_time/view/pages/add_task/widgets/count_ctrl_widget.dart';
 import 'package:mvp_time/view/pages/add_task/widgets/tab_bar_widget.dart';
+import 'package:mvp_time/view/pages/task_details/task_details_page.dart';
 
 class AddTaskSheet extends HookConsumerWidget {
   const AddTaskSheet({super.key});
@@ -109,12 +110,28 @@ class AddTaskSheet extends HookConsumerWidget {
             ),
             // height spacer
             WhiteSpacer()(context,
-                height: ref.watch(calendarProvider) ? 24 : 64),
+                height: ref.watch(calendarProvider) ? 24 : 52),
             // create btn
             AppMainBtnWidget(
               text: ref.watch(addTaskSheetConstantsProvider).txtBtn,
-              onPressed: () {},
-            )
+              onPressed: () {
+                Navigator.pushNamed(
+                  context,
+                  TaskDetailsPage.routeName,
+                  arguments: {
+                    "projectName": "Mvp Task manager",
+                    "taskDeatails": "Design Task management App ",
+                    "description":
+                        "Design Task management App  Design Task management App  Design Task management App  Design Task management App  Design Task",
+                    "points": "20",
+                    "hours": "10",
+                    "approved": "Ali",
+                  },
+                );
+              },
+            ),
+            // height spacer
+            WhiteSpacer()(context, height: 12),
           ],
         ),
       ),

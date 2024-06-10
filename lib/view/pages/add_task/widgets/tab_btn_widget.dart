@@ -33,7 +33,7 @@ class TabBtnWidget extends StatelessWidget {
                 ),
         ),
       ),
-      onPressed: () {},
+      onPressed: onPressed,
       child: Text(
         text,
         style: context.typography.btnSemiBold.copyWith(

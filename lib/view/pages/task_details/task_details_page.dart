@@ -8,8 +8,9 @@ import 'package:mvp_time/core/theme/extension/app_theme_extension.dart';
 import 'package:mvp_time/core/utils/app_sizes.dart';
 import 'package:mvp_time/core/utils/white_spacer.dart';
 import 'package:mvp_time/core/widgets/app_back_btn_widget.dart';
+import 'package:mvp_time/view/pages/task_details/widgets/activity_grid_widget.dart';
+import 'package:mvp_time/view/pages/task_details/widgets/date_time_widget.dart';
 import 'package:mvp_time/view/pages/task_details/widgets/more_bottom_widget.dart';
-import 'package:mvp_time/view/pages/task_details/widgets/start_txt_widget.dart';
 
 class TaskDetailsPage extends ConsumerWidget {
   const TaskDetailsPage({super.key});
@@ -106,30 +107,16 @@ class TaskDetailsPage extends ConsumerWidget {
             ),
             // horizontal line
             const Divider(color: AppColorPalette.grey200),
-            Row(
-              children: [
-                // width spacer
-                const Spacer(flex: 1),
-                // date
-                StartTextWidget(
-                  labelText:
-                      ref.watch(taskDetailsConstantsProvider).txtStartDate,
-                  text: args["date"] ?? "",
-                ),
-                // width spacer
-                const Spacer(flex: 2),
-                // time
-                StartTextWidget(
-                  labelText:
-                      ref.watch(taskDetailsConstantsProvider).txtStartTime,
-                  text: args["time"] ?? "",
-                ),
-                // width spacer
-                const Spacer(flex: 1),
-              ],
-            ),
+            args["date"] == null
+                // activity grid
+                ? ActivityGridWidget(args: args)
+                // date and time
+                : DateTimeWidget(args: args),
             // horizontal line
-            const Divider(color: AppColorPalette.grey200),
+
+            args["date"] == null
+                ? const SizedBox.shrink()
+                : const Divider(color: AppColorPalette.grey200),
           ],
         ),
       ),
