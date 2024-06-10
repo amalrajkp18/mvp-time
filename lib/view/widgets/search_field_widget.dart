@@ -12,7 +12,9 @@ class SearchFieldWidget extends ConsumerWidget {
     super.key,
     required this.onChanged,
   });
-  final void Function(String) onChanged;
+
+  final void Function(String value) onChanged;
+
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     return SizedBox(

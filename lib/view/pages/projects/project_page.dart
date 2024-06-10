@@ -8,7 +8,7 @@ import 'package:mvp_time/core/utils/white_spacer.dart';
 import 'package:mvp_time/core/widgets/app_back_btn_widget.dart';
 import 'package:mvp_time/view/pages/task_details/task_details_page.dart';
 import 'package:mvp_time/view/widgets/search_field_widget.dart';
-import 'package:mvp_time/view/widgets/task_widget.dart';
+import 'package:mvp_time/view/widgets/task_summary_widget.dart';
 
 // sample list
 final List<Map<String, dynamic>> taskList = [
@@ -89,7 +89,7 @@ class ProjectsPage extends HookConsumerWidget {
             //project Tiles
             Expanded(
               child: ListView.separated(
-                itemBuilder: (context, index) => TaskWidget(
+                itemBuilder: (context, index) => TaskSummaryWidget(
                   percentage: taskList[index]["percentage"],
                   title: taskList[index]["title"],
                   subTxt: taskList[index]["subTxt"],

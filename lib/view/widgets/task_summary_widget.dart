@@ -10,8 +10,8 @@ import 'package:mvp_time/core/utils/white_spacer.dart';
 import 'package:mvp_time/view/widgets/progress_widget.dart';
 import 'package:mvp_time/view/widgets/task_status_headtxt_widget.dart';
 
-class TaskWidget extends ConsumerWidget {
-  const TaskWidget({
+class TaskSummaryWidget extends ConsumerWidget {
+  const TaskSummaryWidget({
     super.key,
     required this.percentage,
     required this.title,

@@ -8,7 +8,7 @@ import 'package:mvp_time/core/utils/white_spacer.dart';
 import 'package:mvp_time/core/widgets/app_back_btn_widget.dart';
 import 'package:mvp_time/view/pages/task_details/task_details_page.dart';
 import 'package:mvp_time/view/pages/time_line/widgets/meeting_field_widget.dart';
-import 'package:mvp_time/view/widgets/task_widget.dart';
+import 'package:mvp_time/view/widgets/task_summary_widget.dart';
 
 // sample data
 final Map<String, dynamic> task = {
@@ -83,7 +83,7 @@ class TimeLinePage extends HookConsumerWidget {
                 shrinkWrap: true,
                 physics: const NeverScrollableScrollPhysics(),
                 itemBuilder: (context, index) {
-                  return TaskWidget(
+                  return TaskSummaryWidget(
                     percentage: task["percentage"],
                     title: task["title"],
                     subTxt: task["subTxt"],

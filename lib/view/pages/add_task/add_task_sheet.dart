@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:mvp_time/controller/calendar/calendar_provider.dart';
-import 'package:mvp_time/controller/count/count_provider.dart';
 import 'package:mvp_time/core/constants/add_task_page/add_task_sheet_constants.dart';
 import 'package:mvp_time/core/theme/extension/app_theme_extension.dart';
 import 'package:mvp_time/core/utils/app_sizes.dart';
@@ -20,9 +19,15 @@ class AddTaskSheet extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    // project textfield
+    // project text controller
     final projectTextController = useTextEditingController();
+    // task text controller
     final taskTextController = useTextEditingController();
+
+    // hours count
+    final selectedHoursCount = useState<int>(0);
+    //point count
+    final taskPointsCountProvider = useState<int>(0);
 
     return Container(
       width: double.infinity,
@@ -53,7 +58,7 @@ class AddTaskSheet extends HookConsumerWidget {
             // height spacer
             WhiteSpacer()(context, height: 20),
             // btns
-            const TabBarWidget(),
+            const AddTaskTabBarBtns(),
             // height spacer
             WhiteSpacer()(context, height: 28),
             // calendar
@@ -83,14 +88,14 @@ class AddTaskSheet extends HookConsumerWidget {
             //select hours count ctrl
             CountCtrlWidget(
               title: ref.watch(addTaskSheetConstantsProvider).txtSelectHours,
-              count: ref.watch(selectedHoursCountProvider),
+              count: selectedHoursCount.value,
               decrementTap: () {
-                if (ref.read(selectedHoursCountProvider) > 0) {
-                  ref.read(selectedHoursCountProvider.notifier).state--;
+                if (selectedHoursCount.value > 0) {
+                  selectedHoursCount.value++;
                 }
               },
               incrementTap: () {
-                ref.read(selectedHoursCountProvider.notifier).state++;
+                selectedHoursCount.value++;
               },
             ),
             // height spacer
@@ -98,14 +103,14 @@ class AddTaskSheet extends HookConsumerWidget {
             //task point count ctrl
             CountCtrlWidget(
               title: ref.watch(addTaskSheetConstantsProvider).txtTaskPoints,
-              count: ref.watch(taskPointsCountProvider),
+              count: taskPointsCountProvider.value,
               decrementTap: () {
-                if (ref.read(taskPointsCountProvider) > 0) {
-                  ref.read(taskPointsCountProvider.notifier).state--;
+                if (taskPointsCountProvider.value > 0) {
+                  taskPointsCountProvider.value--;
                 }
               },
               incrementTap: () {
-                ref.read(taskPointsCountProvider.notifier).state++;
+                taskPointsCountProvider.value++;
               },
             ),
             // height spacer

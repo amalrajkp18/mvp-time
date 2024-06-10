@@ -91,8 +91,8 @@ final class AppTheme {
           ),
           labelMedium: TextStyle(
             fontFamily: 'montserrat',
-            fontSize: context.width(14),
-            fontWeight: FontWeight.w400,
+            fontSize: context.width(18),
+            fontWeight: FontWeight.w500,
             color: AppColorPalette.black500,
           ),
           labelRegular: TextStyle(
