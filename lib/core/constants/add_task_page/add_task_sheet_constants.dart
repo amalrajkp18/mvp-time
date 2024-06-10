@@ -1,8 +1,8 @@
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
-part 'new_task_page_constants.g.dart';
+part 'add_task_sheet_constants.g.dart';
 
-final class NewTaskPageConstants {
+final class AddTaskSheetConstants {
   final String txtHead = "New Task";
   final String txtyesterDay = "Yesterday";
   final String txtToday = "Today";
@@ -17,6 +17,6 @@ final class NewTaskPageConstants {
 }
 
 @riverpod
-NewTaskPageConstants newTaskPageConstants(NewTaskPageConstantsRef ref) {
-  return NewTaskPageConstants();
+AddTaskSheetConstants addTaskSheetConstants(AddTaskSheetConstantsRef ref) {
+  return AddTaskSheetConstants();
 }

@@ -107,6 +107,12 @@ final class AppTheme {
             fontWeight: FontWeight.w400,
             color: AppColorPalette.black500,
           ),
+          btnSemiBold: TextStyle(
+            fontFamily: 'montserrat',
+            fontSize: context.width(14),
+            fontWeight: FontWeight.w600,
+            color: AppColorPalette.black500,
+          ),
           btnMedium: TextStyle(
             fontFamily: 'montserrat',
             fontSize: context.width(18),

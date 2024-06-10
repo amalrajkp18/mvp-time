@@ -6,6 +6,7 @@ import 'package:mvp_time/core/theme/extension/app_theme_extension.dart';
 import 'package:mvp_time/core/utils/app_sizes.dart';
 import 'package:mvp_time/core/utils/white_spacer.dart';
 import 'package:mvp_time/core/widgets/app_back_btn_widget.dart';
+import 'package:mvp_time/view/pages/task_details/task_details_page.dart';
 import 'package:mvp_time/view/pages/time_line/widgets/meeting_field_widget.dart';
 import 'package:mvp_time/view/widgets/task_widget.dart';
 
@@ -88,6 +89,21 @@ class TimeLinePage extends HookConsumerWidget {
                     subTxt: task["subTxt"],
                     progrees: task["progrees"],
                     imageList: task["imageList"],
+                    onTap: () {
+                      // navigate to task details
+                      Navigator.pushNamed(
+                        context,
+                        TaskDetailsPage.routeName,
+                        arguments: {
+                          "projectName": "Mvp Task manager",
+                          "taskDeatails": "Design Task management App ",
+                          "description":
+                              "Design Task management App  Design Task management App  Design Task management App  Design Task management App  Design Task",
+                          "date": "4Apr2024",
+                          "time": " 04:45PM",
+                        },
+                      );
+                    },
                   );
                 },
                 separatorBuilder: (context, index) => index == 0

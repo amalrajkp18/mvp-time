@@ -79,7 +79,7 @@ class ProjectsPage extends HookConsumerWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             // height spacer
-            WhiteSpacer()(context, height: 22),
+            WhiteSpacer()(context, height: 16),
             // search field
             SearchFieldWidget(
               onChanged: (value) {},
@@ -89,7 +89,14 @@ class ProjectsPage extends HookConsumerWidget {
             //project Tiles
             Expanded(
               child: ListView.separated(
-                itemBuilder: (context, index) => InkWell(
+                itemBuilder: (context, index) => TaskWidget(
+                  percentage: taskList[index]["percentage"],
+                  title: taskList[index]["title"],
+                  subTxt: taskList[index]["subTxt"],
+                  progrees: taskList[index]["progrees"],
+                  imageList: taskList[index]["imageList"],
+                  image: taskList[index]["image"],
+                  isBused: taskList[index]["isBused"],
                   onTap: () {
                     // navigate to task details
                     Navigator.pushNamed(
@@ -105,15 +112,6 @@ class ProjectsPage extends HookConsumerWidget {
                       },
                     );
                   },
-                  child: TaskWidget(
-                    percentage: taskList[index]["percentage"],
-                    title: taskList[index]["title"],
-                    subTxt: taskList[index]["subTxt"],
-                    progrees: taskList[index]["progrees"],
-                    imageList: taskList[index]["imageList"],
-                    image: taskList[index]["image"],
-                    isBused: taskList[index]["isBused"],
-                  ),
                 ),
                 separatorBuilder: (context, index) =>
                     WhiteSpacer()(context, height: 16),

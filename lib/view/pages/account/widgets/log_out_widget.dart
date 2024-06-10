@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:mvp_time/controller/bottom_nav/bottom_nav_index_provider.dart';
 import 'package:mvp_time/core/constants/account_page/account_page_constants.dart';
 import 'package:mvp_time/core/constants/icons_constants/icon_constants.dart';
 import 'package:mvp_time/core/utils/app_alert_box.dart';
@@ -30,11 +31,12 @@ class LogOutWidget extends ConsumerWidget {
               AppMainBtnWidget(
                 text: ref.watch(accountPageConstantsProvider).txtBtnYes,
                 onPressed: () {
-                  //TODO: logout functionalitie
+                  //TODO: logout functionalities
                   Navigator.pushReplacementNamed(
                     context,
                     LoginPage.routeName,
                   );
+                  ref.invalidate(bottonNavIndexProvider);
                 },
               ),
               // height spacer

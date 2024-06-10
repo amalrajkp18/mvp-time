@@ -7,6 +7,7 @@ import 'package:mvp_time/core/theme/app_color_palette.dart';
 import 'package:mvp_time/core/theme/extension/app_theme_extension.dart';
 import 'package:mvp_time/core/utils/app_sizes.dart';
 import 'package:mvp_time/core/widgets/bottom_nav_bar/bottom_nav_icon_widget.dart';
+import 'package:mvp_time/view/pages/add_task/add_task_sheet.dart';
 
 class BottomNavBarWidget extends ConsumerWidget {
   const BottomNavBarWidget({
@@ -62,7 +63,16 @@ class BottomNavBarWidget extends ConsumerWidget {
           ),
           // new task
           InkWell(
-            onTap: () {},
+            onTap: () {
+              // add task sheet
+              showModalBottomSheet(
+                isDismissible: false,
+                isScrollControlled: true,
+                enableDrag: false,
+                context: context,
+                builder: (context) => const AddTaskSheet(),
+              );
+            },
             child: CircleAvatar(
               backgroundColor: AppColorPalette.black500,
               radius: context.width(32),

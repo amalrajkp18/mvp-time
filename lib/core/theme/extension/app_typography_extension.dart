@@ -14,6 +14,7 @@ class AppTypographyExtension extends ThemeExtension<AppTypographyExtension> {
   final TextStyle labelMedium;
   final TextStyle labelRegular;
   final TextStyle hintRegular;
+  final TextStyle btnSemiBold;
   final TextStyle btnMedium;
   final TextStyle btnRegular;
   final TextStyle alertTitleMedium;
@@ -21,6 +22,7 @@ class AppTypographyExtension extends ThemeExtension<AppTypographyExtension> {
   final TextStyle alertHintRegular;
 
   AppTypographyExtension({
+    required this.btnSemiBold,
     required this.btnMedium,
     required this.btnRegular,
     required this.bodySemibold,
@@ -55,6 +57,7 @@ class AppTypographyExtension extends ThemeExtension<AppTypographyExtension> {
     TextStyle? labelMedium,
     TextStyle? labelRegular,
     TextStyle? hintRegular,
+    TextStyle? btnSemiBold,
     TextStyle? btnMedium,
     TextStyle? btnRegular,
     TextStyle? alertTitleMedium,
@@ -80,6 +83,7 @@ class AppTypographyExtension extends ThemeExtension<AppTypographyExtension> {
       alertHintRegular: alertTitleMedium ?? this.alertContentRegular,
       bodyLight: bodyLight ?? this.bodyLight,
       btnRegular: btnRegular ?? this.btnRegular,
+      btnSemiBold: btnSemiBold ?? this.btnSemiBold,
     );
   }
 
@@ -104,6 +108,7 @@ class AppTypographyExtension extends ThemeExtension<AppTypographyExtension> {
       hintRegular: TextStyle.lerp(hintRegular, other.hintRegular, t)!,
       btnMedium: TextStyle.lerp(btnMedium, other.btnMedium, t)!,
       btnRegular: TextStyle.lerp(btnRegular, other.btnRegular, t)!,
+      btnSemiBold: TextStyle.lerp(btnSemiBold, other.btnSemiBold, t)!,
       alertTitleMedium:
           TextStyle.lerp(alertTitleMedium, other.alertTitleMedium, t)!,
       alertContentRegular:
