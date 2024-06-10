@@ -14,10 +14,11 @@ class NotificationIcBtn extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    return InkWell(
-      onTap: onTap,
-      child: Padding(
-        padding: EdgeInsets.only(right: context.width(16)),
+    return Padding(
+      padding: EdgeInsets.only(right: context.width(16)),
+      child: InkWell(
+        onTap: onTap,
+        borderRadius: BorderRadius.circular(context.width(22)),
         child: CircleAvatar(
           backgroundColor: AppColorPalette.grey50,
           child: Stack(

@@ -21,10 +21,9 @@ class LoginPage extends HookConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     // email textfield controller
-    final emailTextController =
-        useTextEditingController(text: "amalraj@gmail.com");
+    final emailTextController = useTextEditingController();
     // password textfield controller
-    final passwordTextController = useTextEditingController(text: "12345678");
+    final passwordTextController = useTextEditingController();
 
     return Scaffold(
       body: Padding(

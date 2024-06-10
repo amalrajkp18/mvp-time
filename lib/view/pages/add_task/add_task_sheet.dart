@@ -115,7 +115,7 @@ class AddTaskSheet extends HookConsumerWidget {
             ),
             // height spacer
             WhiteSpacer()(context,
-                height: ref.watch(calendarProvider) ? 24 : 52),
+                height: ref.watch(calendarProvider) ? 28 : 42),
             // create btn
             AppMainBtnWidget(
               text: ref.watch(addTaskSheetConstantsProvider).txtBtn,
